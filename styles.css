@@ -1,0 +1,236 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #2b2b2b, #595959, #3f335e);
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+img {
+    max-width: 25%;
+    height: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #f5f5f5;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h2, h3, h4 {
+    font-size: 2em;
+    color: #007BFF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+article {
+    margin-bottom: 20px;
+    font-size: 17px;
+    font-family: 'Arial', sans-serif;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    color: #007BFF;
+}
+
+main {
+    margin: 20px;
+    margin-bottom: 60px; /* The height of the footer + padding of the footer */
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #f5f5f5;
+    text-align: center;
+    padding: 10px;  /* Reduced the padding from 20px to 10px */
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2, h3, h4 {
+        font-size: 1.5em;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+    }
+
+    img {
+        max-width: 100%;
+    }
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.column-wrapper {
+    column-gap: 2em;  /* Add this line to set space between the columns */
+}
+
+.left-column, .right-column {
+    width: 45%; /* Adjust this value as needed */
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+}
+
+#payment-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#payment-table th, #payment-table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#payment-table th {
+    background-color: #f2f2f2;
+}
+
+@media only screen and (min-width: 768px) {
+    .column-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .left-column, .right-column {
+        width: 48%;
+    }
+}
+
+label {
+    display: block;
+    padding-bottom: 5px;
+    padding-top: 15px;
+    color: #333;
+    font-weight: bold;
+}
+
+input[type=number] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    display: block;
+    width: auto;  /* Adjusted from 100% to auto */
+    padding: 10px 20px;  /* Added horizontal padding */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+input[type=submit]:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .column-wrapper {
+        flex-direction: column;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+    }
+}
+
+/* CSS for Page Links */
+.page-links {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* CSS for Scrollable Table */
+@media only screen and (max-width: 768px) {
+    .responsive-table {
+        overflow-x: auto;
+        display: block;
+    }
+}
+@media only screen and (max-width: 768px) {
+    nav ul li {
+        display: block;
+        text-align: left;
+    }
+}
+
+
