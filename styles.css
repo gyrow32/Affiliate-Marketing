@@ -226,3 +226,10 @@ footer {
     flex-direction: column;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .hamburger {
+    display: block; /* Shown on smaller screens */
+  }
+}
+
