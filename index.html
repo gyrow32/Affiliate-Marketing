@@ -6,6 +6,15 @@
     <title>Car Financing Credit Tips</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
+document.addEventListener('DOMContentLoaded', function() {
+  var hamburger = document.getElementById('hamburger');
+  var navLinks = document.getElementById('navLinks');
+
+  hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('open');
+    navLinks.classList.toggle('open');
+  });
+});
 
 <body>
       <header>
