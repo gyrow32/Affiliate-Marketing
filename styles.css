@@ -67,6 +67,77 @@ nav ul li a:hover {
   color: #007BFF;  
 }
 
+/* Hamburger menu styles */
+.hamburger {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+  height: 2rem;
+  position: relative;
+  width: 2rem;
+}
+
+.hamburger span {
+  background-color: #f5f5f5;
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  transition: all 0.5s;
+  width: 50%;
+}
+
+.hamburger span:nth-child(1) {
+  top: calc(50% - 6px);
+}
+
+.hamburger span:nth-child(2) {
+  top: 50%;
+}
+
+.hamburger span:nth-child(3) {
+  top: calc(50% + 6px);
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateX(-50%) rotate(45deg);
+  top: 50%;
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateX(-50%) rotate(-45deg);
+  top: 50%;
+}
+
+/* Navigation styles */
+.nav-links {
+  display: none; /* Hidden by default */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: all 0.5s;
+}
+
+.nav-links.open {
+  display: block; /* Shown when the hamburger menu is clicked */
+}
+
+@media only screen and (min-width: 768px) {
+  /* Show the menu items and hide the hamburger menu on larger screens */
+  .nav-links {
+    display: block;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+/* End of Hamburger menu styles */
+
 main {  
   margin: 20px;  
   margin-bottom: 60px;
@@ -107,14 +178,14 @@ footer {
   img {  
     max-width: 100%;  
   }
-}  
+}
 
 .form-wrapper {  
   display: flex;  
   flex-direction: column;  
-}  
+}
 
-..column-wrapper {
+.column-wrapper {
   column-gap: 2em; /* Add this line to set space between the columns */
 }
 
