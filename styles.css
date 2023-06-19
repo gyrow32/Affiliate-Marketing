@@ -18,6 +18,7 @@ header {
   display: flex;  
   justify-content: space-between;  
   align-items: center;  
+  position: relative; /* Added position */
 }
 
 img {  
@@ -72,12 +73,16 @@ nav ul li a:hover {
   display: none; /* Hidden by default */
   cursor: pointer;
   height: 2rem;
-  position: relative;
+  position: absolute;
+  top: 50px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 101;
   width: 2rem;
 }
 
 .hamburger span {
-  background-color: #f5f5f5;
+  background-color: #007BFF; /* Changed to blue */
   display: block;
   height: 2px;
   left: 50%;
@@ -120,6 +125,14 @@ nav ul li a:hover {
   margin: 0;
   padding: 0;
   transition: all 0.5s;
+  position: absolute;
+  top: 80px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .nav-links.open {
@@ -226,5 +239,3 @@ footer {
     flex-direction: column;
   }
 }
-
-
